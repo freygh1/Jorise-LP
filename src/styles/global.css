@@ -1,1 +1,17 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: Abel;
+  src: url(../assets/Abel-Regular.ttf);
+}
+
+@font-face {
+  font-family: Titi;
+  src: url(../assets/TitilliumWeb-BoldItalic.ttf);
+}
+
+:root {
+  --main-font: Abel;
+  --secondary-font:Titi;
+}
+
