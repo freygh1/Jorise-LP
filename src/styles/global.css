@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "daisyui";
 
 @font-face {
   font-family: Abel;
@@ -12,6 +13,15 @@
 
 :root {
   --main-font: Abel;
-  --secondary-font:Titi;
+  --secondary-font: Titi;
 }
 
+a,
+p,
+span {
+  font-family: Abel;
+}
+
+/* h1, h2, h3, h4, h5, h6{
+  font-family: ;
+} */

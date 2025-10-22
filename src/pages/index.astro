@@ -1,19 +1,42 @@
 ---
-import "../styles/global.css";
-import LandingLayout from "../layouts/LandingLayout.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import CTA from "../components/CTA.astro";
+import Slider from "../components/Slider.astro";
 ---
 
-<LandingLayout>
-	<div class="min-h-screen w-full relative">
-		<div
-			class="absolute inset-0 z-0"
-			style={{
-				background: "radial-gradient(125% 125% at 50% 90%, #fff 50%, #aa92fa 100%)",
-			}}>
-		</div>
+<Layout>
+<div class="min-h-screen w-full bg-white relative overflow-hidden">
+	{/* Grid + Glow on All Sides */}
+	<div
+		class="absolute inset-0 z-0 pointer-events-none"
+		style={{
+			backgroundImage: `
+       linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+       radial-gradient(circle 620px at 0% 200px, #63afff, transparent),     /* Left */
+       radial-gradient(circle 620px at 100% 200px, #63afff, transparent),  /* Right */
+       radial-gradient(circle 620px at 50% 0px, #63afff, transparent),     /* Top */
+       radial-gradient(circle 620px at 50% 100%, #63afff, transparent)     /* Bottom */
+     `,
+			backgroundSize: `
+       96px 64px,    
+       96px 64px,    
+       100% 100%,    
+       100% 100%,
+       100% 100%,
+       100% 100%
+     `,
+		}}>
 	</div>
-	<!-- Contenido -->
-	<main class="relative z-10">
-		<slot />
-	</main>
-</LandingLayout>
+	<div class="relative z-10">
+			<Header />
+			<Hero />
+			<CTA />
+			<Slider />
+		</div>
+</div>
+</Layout>
+
+
