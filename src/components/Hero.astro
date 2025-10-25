@@ -1,15 +1,25 @@
-<section class="flex flex-wrap md:flex-nowrap items-center justify-between px-10 py-10 gap-10">
-  <!-- Charts Placeholder -->
-  <div class="w-full md:w-[55%] bg-white/20 backdrop-blur-sm rounded-2xl h-80 border border-amber-400 flex items-center justify-center -z-10">
-    <p class="text-amber-400 opacity-80">[Diseño de Charts Minimalista]</p>
-  </div>
+---
+import { Image } from "astro:assets";
+import cs from "../img/ciberseguridadjpg.jpg";
+---
 
+<section class="flex flex-wrap md:flex-nowrap items-center justify-between px-10 py-10 gap-10 relative">
+  <!-- Charts Placeholder-->
   <!-- Text -->
-  <div class="w-full md:w-[40%] text-purple-800">
-    <h1 class="max-sm:text-3xl max-md:text-[40px] md:text-4xl xl:text-5xl font-bold leading-snug mb-4">
-      Tu información es tan valiosa como tú mismo,<br />
-      por eso la cuidamos.
+  <div class="w-full md:w-[50%] text-purple-800">
+    <h1 class="max-sm:text-[28px] max-md:text-[40px] md:text-4xl xl:text-5xl font-bold leading-snug mb-4">
+      <span class="heading bg-[#083ba6] text-white">Tu información es tan</span>
+      <br />
+      <span class="heading bg-[#083ba6] text-white">valiosa como tú mismo,</span><br />
+      <span class="heading bg-[#083ba6] text-white">por eso la cuidamos.</span>
     </h1>
-    <p class="text-purple-950 font-bold text-[20px]">Protegemos tus datos con las mejores tecnologías en ciberseguridad.</p>
+    <p class="text-purple-950 font-bold text-[20px] bg-white">Protegemos tus datos con las mejores tecnologías en ciberseguridad.</p>
+  </div>
+  <div class="borderr size-[50vw] bg-orange-400/10 absolute border-amber-950 filter blur-lg -z-10"></div>
+
+  <div
+    class="w-fit bg-white/20 backdrop-blur-sm rounded-2xl h-fit border-2 border-white/50 drop-shadow-lg drop-shadow-accent flex items-center justify-center -z-10">
+    <!-- <p class="text-amber-400 opacity-80">[Diseño de Charts Minimalista]</p> -->
+    <Image src={cs} alt={"imagen de prueba"} class:list={["md:size-[10vw] rounded-2xl"]} />
   </div>
 </section>

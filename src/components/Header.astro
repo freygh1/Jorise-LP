@@ -7,24 +7,23 @@ const {
   testimonio = "testimonios",
   cont = "contáctanos!",
 } = Astro.props;
-import { Image } from "astro:assets";
 import DesktopNavbar from "./DesktopNavbar.astro";
 import MobileNavbar from "./MobileNavbar.astro";
 import Brand from "./Brand.astro";
 ---
 
-<header class="flex justify-around items-center py-1 text-white text-2xl bg-cyan-700/70 sticky top-0">
+<header class="flex justify-between items-center py-1 px-10 text-white text-2xl w-full sticky top-0 rounded-b-2xl z-20">
   <Brand />
   <DesktopNavbar>
     <a href="#">{inicio}</a>
     <a href="#">{serv}</a>
-    <a href="#">{planes}</a>
+    <a href="#pricing">{planes}</a>
     <a href="#">{blog}</a>
   </DesktopNavbar>
   <MobileNavbar>
     <a href="#">{inicio}</a>
     <a href="#">{serv}</a>
-    <a href="#">{planes}</a>
+    <a href="#pricing">{planes}</a>
     <a href="#">{blog}</a>
   </MobileNavbar>
 </header>

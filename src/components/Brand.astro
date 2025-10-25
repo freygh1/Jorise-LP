@@ -3,6 +3,6 @@ import { Image } from "astro:assets";
 import logo from "../img/logo1.svg";
 ---
 
-<div class=" w-fit h-full">
-  <Image src={logo} alt="Logo de Jorise Enterprise" width={140}/>
+<div class=" w-fit h-full border-0 rounded-2xl bg-white">
+  <Image src={logo} alt="Logo de Jorise Enterprise" width={140} loading={"lazy"}/>
 </div>

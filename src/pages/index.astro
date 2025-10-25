@@ -1,39 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import CTA from "../components/CTA.astro";
-import Slider from "../components/Slider.astro";
+import PresentationSection from "../components/PresentationSection.astro";
+import Pricing from "../components/Pricing.astro";
+import MainBackground from "../components/MainBackground.astro";
 ---
 
+<style is:global>
+  .borderr {
+    border-radius: 30% 70% 100% 0% / 100% 55% 45% 0%;
+  }
+</style>
 <Layout>
-  <main class="min-h-screen w-full bg-white relative overflow-hidden">
-    <div
-      class="absolute inset-0 z-0 pointer-events-none"
-      style={{
-        backgroundImage: `
-       linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-       radial-gradient(circle 620px at 0% 200px, #63afff, transparent),     /* Left */
-       radial-gradient(circle 620px at 100% 200px, #63afff, transparent),  /* Right */
-       radial-gradient(circle 620px at 50% 0px, #63afff, transparent),     /* Top */
-       radial-gradient(circle 620px at 50% 100%, #63afff, transparent)     /* Bottom */
-     `,
-        backgroundSize: `
-       96px 64px,    
-       96px 64px,    
-       100% 100%,    
-       100% 100%,
-       100% 100%,
-       100% 100%
-     `,
-      }}>
-    </div>
-    <div class="relative z-10">
-      <Header />
-      <Hero />
-      <CTA />
-    </div>
-    
+  <main class="h-dvh w-full bg-white relative overflow-hidden">
+    <MainBackground />
+
+    <section class="relative z-10 snap-y snap-mandatory overflow-y-scroll h-screen">
+      <!-- PRESENTATION SECTION -->
+      <PresentationSection />
+
+      <!-- LAS SIGUIENTES SECCIONES A PARTIR DE AQUI SERAN CADA UNA PARA PRESENTAR LOS SERVICIOS Y FUNCIONES-->
+      <section class="snap-always snap-center min-h-screen bg-gradient-to-r from-teal-400 to-yellow-200"></section>
+      <section class="snap-always snap-center min-h-screen bg-gradient-to-r from-fuchsia-600 to-pink-600"></section>
+      <section class="snap-always snap-center min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500"></section>
+      <!-- Esta seccion presentara brevemente los planes -->
+      <Pricing />
+    </section>
   </main>
 </Layout>
